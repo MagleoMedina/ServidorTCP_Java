@@ -65,5 +65,6 @@ Juan: Hola
 - El servidor maneja múltiples clientes simultáneamente utilizando hilos.
 
 ## Autor
+Magleo Medina 
 
 Este proyecto fue desarrollado como parte de un ejercicio de la materia de telecomunicaciones dictada por el Ing. Germain Salazar.
