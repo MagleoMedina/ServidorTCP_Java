@@ -1,18 +1,69 @@
-## Getting Started
+# Telecomunicaciones TCP Project
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descripción
 
-## Folder Structure
+Este proyecto implementa una comunicación cliente-servidor utilizando sockets TCP en Java. El cliente envía mensajes al servidor, y el servidor responde con un eco del mensaje recibido. Además, el cliente debe proporcionar su nombre antes de conectarse, y el servidor muestra el nombre del cliente junto con cada mensaje enviado.
 
-The workspace contains two folders by default, where:
+## Estructura del Proyecto
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- **ClienteTCP.java**: Implementa la lógica del cliente TCP. Solicita el nombre del usuario y envía mensajes al servidor.
+- **ServidorTCP.java**: Implementa la lógica del servidor TCP. Escucha conexiones de clientes y responde a los mensajes recibidos.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Requisitos
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Java Development Kit (JDK) instalado.
+- Entorno de desarrollo para ejecutar programas en Java.
+- Puerto 8050 disponible en la máquina donde se ejecutará el servidor.
 
-## Dependency Management
+## Cómo Ejecutar
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Servidor
+1. Navega al directorio del proyecto.
+2. Compila el archivo `ServidorTCP.java`:
+   ```bash
+   javac src/ServidorTCP.java
+   ```
+3. Ejecuta el servidor:
+   ```bash
+   java -cp bin ServidorTCP
+   ```
+4. El servidor estará escuchando en el puerto `8050`.
+
+### Cliente
+1. Navega al directorio del proyecto.
+2. Compila el archivo `ClienteTCP.java`:
+   ```bash
+   javac src/ClienteTCP.java
+   ```
+3. Ejecuta el cliente:
+   ```bash
+   java -cp bin ClienteTCP
+   ```
+4. Ingresa tu nombre cuando se te solicite y comienza a enviar mensajes al servidor.
+
+## Ejemplo de Uso
+
+### Cliente
+```plaintext
+Por favor, ingresa tu nombre: Juan
+Bienvenido, Juan. Conectando al servidor...
+Escribe un mensaje para enviar al servidor (o 'adios' para salir):
+Hola
+Respuesta del servidor: Servidor dice: Eco -> Juan: Hola
+```
+
+### Servidor
+```plaintext
+Servidor TCP iniciado. Esperando clientes en el puerto 8050...
+¡Cliente conectado desde 127.0.0.1!
+Juan: Hola
+```
+
+## Notas
+
+- El cliente puede enviar múltiples mensajes al servidor hasta que escriba `adios` para cerrar la conexión.
+- El servidor maneja múltiples clientes simultáneamente utilizando hilos.
+
+## Autor
+
+Este proyecto fue desarrollado como parte de un ejercicio de la materia de telecomunicaciones dictada por el Ing. Germain Salazar.
