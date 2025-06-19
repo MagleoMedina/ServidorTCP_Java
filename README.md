@@ -45,10 +45,10 @@ Este proyecto implementa una comunicación cliente-servidor utilizando sockets T
 
 ### Cliente
 ```plaintext
-Por favor, ingresa tu nombre: Juan
-Bienvenido, Juan. Conectando al servidor...
+Por favor, ingresa tu nombre: Maglep
+Bienvenido, Magleo. Conectando al servidor...
 Escribe un mensaje para enviar al servidor (o 'adios' para salir):
-Hola
+Hola mundo desde Java
 Respuesta del servidor: Servidor dice: Eco -> Juan: Hola
 ```
 
@@ -56,7 +56,7 @@ Respuesta del servidor: Servidor dice: Eco -> Juan: Hola
 ```plaintext
 Servidor TCP iniciado. Esperando clientes en el puerto 8050...
 ¡Cliente conectado desde 127.0.0.1!
-Juan: Hola
+Magleo: Hola mundo desde Java
 ```
 
 ## Notas
